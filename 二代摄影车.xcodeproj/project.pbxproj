@@ -21,6 +21,7 @@
 		3E2B5B0A1D003CE800B09862 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2B5B091D003CE800B09862 /* UIKit.framework */; };
 		3E2B5B0C1D003CF000B09862 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2B5B0B1D003CF000B09862 /* Foundation.framework */; };
 		3E2B5B0E1D003CF800B09862 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2B5B0D1D003CF800B09862 /* CoreGraphics.framework */; };
+		3E2B5B151D003E9600B09862 /* ACEDrawingView in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B5B141D003E9600B09862 /* ACEDrawingView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		3E2B5B091D003CE800B09862 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3E2B5B0B1D003CF000B09862 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3E2B5B0D1D003CF800B09862 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3E2B5B141D003E9600B09862 /* ACEDrawingView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ACEDrawingView; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		3E2B5AB91D000AE300B09862 /* 二代摄影车 */ = {
 			isa = PBXGroup;
 			children = (
+				3E2B5B141D003E9600B09862 /* ACEDrawingView */,
 				3E2B5B0F1D003D3A00B09862 /* Frameworks */,
 				3E2B5AF11D00196300B09862 /* openFiles */,
 				3E2B5AED1D000EF600B09862 /* MainView */,
@@ -295,6 +298,7 @@
 			files = (
 				3E2B5ACA1D000AE300B09862 /* LaunchScreen.storyboard in Resources */,
 				3E2B5AC71D000AE300B09862 /* Assets.xcassets in Resources */,
+				3E2B5B151D003E9600B09862 /* ACEDrawingView in Resources */,
 				3E2B5AC51D000AE300B09862 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
