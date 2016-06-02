@@ -21,7 +21,8 @@
 		3E2B5B0A1D003CE800B09862 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2B5B091D003CE800B09862 /* UIKit.framework */; };
 		3E2B5B0C1D003CF000B09862 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2B5B0B1D003CF000B09862 /* Foundation.framework */; };
 		3E2B5B0E1D003CF800B09862 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2B5B0D1D003CF800B09862 /* CoreGraphics.framework */; };
-		3E2B5B151D003E9600B09862 /* ACEDrawingView in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B5B141D003E9600B09862 /* ACEDrawingView */; };
+		3E2B5B241D003F0F00B09862 /* ACEDrawingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2B5B211D003F0F00B09862 /* ACEDrawingTools.m */; };
+		3E2B5B251D003F0F00B09862 /* ACEDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2B5B231D003F0F00B09862 /* ACEDrawingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +67,10 @@
 		3E2B5B091D003CE800B09862 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3E2B5B0B1D003CF000B09862 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3E2B5B0D1D003CF800B09862 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3E2B5B141D003E9600B09862 /* ACEDrawingView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ACEDrawingView; sourceTree = "<group>"; };
+		3E2B5B201D003F0F00B09862 /* ACEDrawingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEDrawingTools.h; sourceTree = "<group>"; };
+		3E2B5B211D003F0F00B09862 /* ACEDrawingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEDrawingTools.m; sourceTree = "<group>"; };
+		3E2B5B221D003F0F00B09862 /* ACEDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEDrawingView.h; sourceTree = "<group>"; };
+		3E2B5B231D003F0F00B09862 /* ACEDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEDrawingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +125,7 @@
 		3E2B5AB91D000AE300B09862 /* 二代摄影车 */ = {
 			isa = PBXGroup;
 			children = (
-				3E2B5B141D003E9600B09862 /* ACEDrawingView */,
+				3E2B5B1F1D003F0F00B09862 /* ACEDrawingView */,
 				3E2B5B0F1D003D3A00B09862 /* Frameworks */,
 				3E2B5AF11D00196300B09862 /* openFiles */,
 				3E2B5AED1D000EF600B09862 /* MainView */,
@@ -191,6 +195,17 @@
 				3E2B5B071D003CE100B09862 /* CoreText.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E2B5B1F1D003F0F00B09862 /* ACEDrawingView */ = {
+			isa = PBXGroup;
+			children = (
+				3E2B5B201D003F0F00B09862 /* ACEDrawingTools.h */,
+				3E2B5B211D003F0F00B09862 /* ACEDrawingTools.m */,
+				3E2B5B221D003F0F00B09862 /* ACEDrawingView.h */,
+				3E2B5B231D003F0F00B09862 /* ACEDrawingView.m */,
+			);
+			path = ACEDrawingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,7 +313,6 @@
 			files = (
 				3E2B5ACA1D000AE300B09862 /* LaunchScreen.storyboard in Resources */,
 				3E2B5AC71D000AE300B09862 /* Assets.xcassets in Resources */,
-				3E2B5B151D003E9600B09862 /* ACEDrawingView in Resources */,
 				3E2B5AC51D000AE300B09862 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,8 +338,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E2B5B251D003F0F00B09862 /* ACEDrawingView.m in Sources */,
 				3E2B5B061D001E9300B09862 /* list_info_cell.m in Sources */,
 				3E2B5ABF1D000AE300B09862 /* AppDelegate.m in Sources */,
+				3E2B5B241D003F0F00B09862 /* ACEDrawingTools.m in Sources */,
 				3E2B5AF41D00198A00B09862 /* list_saved_info.m in Sources */,
 				3E2B5ABC1D000AE300B09862 /* main.m in Sources */,
 				3E2B5AF01D000F1300B09862 /* RootViewController.m in Sources */,
@@ -554,6 +570,7 @@
 				3E2B5AE61D000AE300B09862 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E2B5AE71D000AE300B09862 /* Build configuration list for PBXNativeTarget "二代摄影车Tests" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +579,7 @@
 				3E2B5AE91D000AE300B09862 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E2B5AEA1D000AE300B09862 /* Build configuration list for PBXNativeTarget "二代摄影车UITests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +588,7 @@
 				3E2B5AEC1D000AE300B09862 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
