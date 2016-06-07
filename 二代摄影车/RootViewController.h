@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class ACEDrawingView;
 @interface RootViewController : UIViewController
+@property (nonatomic, unsafe_unretained) IBOutlet ACEDrawingView *draw_view;//绘图view
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *undoBtn;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *redoBtn;
 
 @end

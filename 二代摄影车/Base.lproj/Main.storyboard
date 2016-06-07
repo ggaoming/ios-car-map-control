@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -101,22 +102,33 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0D-6I-C3o" userLabel="Drawing view" customClass="ACEDrawingView">
+                                <rect key="frame" x="20" y="84" width="560" height="428"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="EXB-Zz-oXz" firstAttribute="top" secondItem="8tc-rA-Pqx" secondAttribute="bottom" id="2nu-WM-2d5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PW2-EX-kf1" secondAttribute="trailing" constant="-20" id="2ou-Ta-jqL"/>
+                            <constraint firstItem="PW2-EX-kf1" firstAttribute="top" secondItem="V0D-6I-C3o" secondAttribute="bottom" id="Dpv-9M-t1z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EXB-Zz-oXz" secondAttribute="trailing" constant="-10" id="ESh-si-FTf"/>
                             <constraint firstItem="PW2-EX-kf1" firstAttribute="leading" secondItem="2bk-7l-ci8" secondAttribute="leadingMargin" constant="-20" id="FwO-vb-tMN"/>
                             <constraint firstItem="EXB-Zz-oXz" firstAttribute="leading" secondItem="2bk-7l-ci8" secondAttribute="leadingMargin" constant="-10" id="PDF-44-V7E"/>
                             <constraint firstItem="v3g-mt-M9n" firstAttribute="leading" secondItem="2bk-7l-ci8" secondAttribute="leadingMargin" constant="-20" id="T90-5M-OS9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V0D-6I-C3o" secondAttribute="trailing" id="XhK-Sp-OQK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="v3g-mt-M9n" secondAttribute="trailing" constant="-20" id="aPT-ho-PRg"/>
+                            <constraint firstItem="V0D-6I-C3o" firstAttribute="top" secondItem="EXB-Zz-oXz" secondAttribute="bottom" id="blr-HP-Reo"/>
                             <constraint firstItem="axF-HE-Oqe" firstAttribute="top" secondItem="v3g-mt-M9n" secondAttribute="bottom" id="qyR-XQ-Cm3"/>
                             <constraint firstItem="v3g-mt-M9n" firstAttribute="top" secondItem="PW2-EX-kf1" secondAttribute="bottom" id="vCH-LO-nez"/>
+                            <constraint firstItem="V0D-6I-C3o" firstAttribute="leading" secondItem="2bk-7l-ci8" secondAttribute="leadingMargin" id="zca-C5-Vda"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8lS-Z8-viF" colorLabel="IBBuiltInLabel-Yellow">
-                        <barButtonItem key="leftBarButtonItem" title="回退" id="QWV-96-utL"/>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Undo" id="QWV-96-utL"/>
+                            <barButtonItem title="Redo" id="dhA-CC-wZk"/>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="保存" id="TLx-Lh-s2Q">
                             <connections>
                                 <action selector="Save_Btn_Press:" destination="zaq-Hl-fNe" id="lbh-ec-lpy"/>
@@ -126,7 +138,10 @@
                     <connections>
                         <outlet property="ToolsBar" destination="PW2-EX-kf1" id="55d-1c-ged"/>
                         <outlet property="drawStyleBtn" destination="fJJ-NR-cG7" id="Xp5-s3-svR"/>
+                        <outlet property="draw_view" destination="V0D-6I-C3o" id="Dlc-CY-krD"/>
+                        <outlet property="redoBtn" destination="dhA-CC-wZk" id="Gcl-38-Xu0"/>
                         <outlet property="rulerBtn" destination="p7x-Vw-SWx" id="LVA-O1-Sov"/>
+                        <outlet property="undoBtn" destination="QWV-96-utL" id="DP5-kb-3gw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Oz-RL-fsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -146,7 +161,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YnH-DR-1vk" id="Ckk-fp-w7B">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cci-QM-nWb">

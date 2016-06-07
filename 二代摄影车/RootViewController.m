@@ -7,8 +7,9 @@
 //
 
 #import "RootViewController.h"
-
-@interface RootViewController ()
+#import "ACEDrawingView.h"
+#import <QuartzCore/QuartzCore.h>
+@interface RootViewController ()< ACEDrawingViewDelegate, UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *rulerBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *drawStyleBtn;
 @property (weak, nonatomic) IBOutlet UIToolbar *ToolsBar;
@@ -17,7 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.draw_view.delegate = self;
+  
+}
+#pragma mark -updata Undo Redo Status
+-(void)updateUndoRedoStates{
+    self.undoBtn.enabled = [self.draw_view canUndo];
+    self.redoBtn.enabled = [self.draw_view canRedo];
+}
+#pragma mark -ACEDrawing View Delegate
+-(void)drawingView:(ACEDrawingView *)view didEndDrawUsingTool:(id<ACEDrawingTool>)tool
+{
+
 }
 //保存按钮点击
 - (IBAction)Save_Btn_Press:(id)sender {
